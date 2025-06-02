@@ -1,265 +1,162 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio Projets & Services | Nastasia SOILIH</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #fafafa;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      margin-bottom: 0.3rem;
-      font-weight: 700;
-      color: #d63384;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    section h2 {
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      color: #d63384;
-      font-weight: 700;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 0.3rem;
-      max-width: max-content;
-    }
-    iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      border: none;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .services-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-    }
-    /* Service card layout avec image en bas */
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    .service-card-content {
-      padding: 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .service-card-content h3 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: #d63384;
-    }
-    .service-card-content p,
-    .service-card-content ul {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-    .service-card-content ul {
-      padding-left: 1.2rem;
-    }
-    .service-card img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-top: 4px solid #d63384;
-      transition: opacity 0.3s ease;
-    }
-    .cta {
-      text-align: center;
-      margin: 4rem 0 2rem 0;
-      background: #d63384;
-      color: white;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 1rem;
-      background: white;
-      border: 2px solid #d63384;
-      color: #d63384;
-      text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .cta a:hover {
-      background: #d63384;
-      color: white;
-    }
-    footer {
-      background-color: #d63384;
-      text-align: center;
-      padding: 1rem 0;
-      color: #ffffff;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Product Owner | Cheffe de projet IT</h1>
-    <p>15+ ans d’expérience | Innovation & stratégie produit | Curieuse, passionnée, engagée</p>
-  </header>
-  <section>
-<div style="text-align: center; max-width: 800px; margin: 0 auto;">
-  <p>Product Owner et Cheffe de projet IT, je cumule plus de 15 ans d’expérience dans l’informatique, dont les 5 dernières années sur des produits liés à la DATA/IA, aux opérations bancaires, à la fiscalité, au voyage et aux frais de déplacement.
+import React from "react";
 
-Je navigue avec agilité entre les équipes techniques, coordination transverse et stratégie d'entreprise.
-Entrepreneuse et ancienne Responsable digital, je place l’innovation, l’écoute utilisateur et le business au cœur de ma démarche.</p>
-</div>
-    <iframe src="https://youtu.be/3sV7fqw509s?si=sV5pcSO3InFqjFnq" title="Présentation vidéo"></iframe>
-  <header>
-    <h1>Projets phares</h1>
-  </header>
-    <div class="services-wrapper">
-      <!-- Thinkeo -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>📚 1st Product Manager</h3>
-          <p>J’ai accompagné les fondateurs de <strong>Thinkeo</strong>, une plateforme de Knowledge Management, dès les premières étapes de son développement produit.</p>
-          <p><strong>Mon rôle a couvert plusieurs volets :</strong></p>
-          <ul>
-            <li>Définition de la <strong>roadmap produit</strong></li>
-            <li>Gestion du <strong>backlog</strong> et priorisation</li>
-            <li>Réalisation des <strong>tests QA</strong> sur les fonctionnalités front-end</li>
-            <li><strong>Reporting de bugs</strong> et contribution à la qualité logicielle</li>
-            <li>Traduction des <strong>librairies back office</strong></li>
-            <li><strong>Déploiement</strong> du plugin Office/Excel sur <strong>Microsoft AppSource</strong></li>
-          </ul>
-          <p>En parallèle, j’ai progressivement mis en place un cadre <strong>Scrum</strong>, permettant de stabiliser l’équipe produit et de structurer les itérations de développement.</p>
-          <p><strong>Impact :</strong> accompagnement stratégique produit, levée de fonds réussie (1M€), structuration agile, forte autonomie de l’équipe.</p>
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen w-full bg-gray-50 text-gray-800">
+      {/* Hero Section - pink gradient background */}
+      <header className="bg-gradient-to-r from-pink-600 to-pink-400 text-white py-20 px-4 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2">
+          Product Owner | Cheffe de projet IT
+        </h1>
+        <p className="text-lg md:text-xl">
+          15+ ans d’expérience | Innovation & stratégie produit | Curieuse, passionnée, engagée
+        </p>
+      </header>
+
+      {/* White content box with intro and video */}
+      <section className="relative z-10 -mt-10 px-4">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
+          <p className="text-gray-700 mb-4">
+            Product Owner et Cheffe de projet IT, je cumule plus de 15 ans d’expérience dans l’informatique, dont les 5 dernières années sur des produits liés à la DATA/IA, aux opérations bancaires, à la fiscalité, au voyage et aux frais de déplacement.
+          </p>
+          <p className="text-gray-700 mb-4">
+            Je navigue avec agilité entre les équipes techniques, coordination transverse et stratégie d'entreprise.
+          </p>
+          <p className="text-gray-700 mb-6">
+            Entrepreneuse et ancienne Responsable digital, je place l’innovation, l’écoute utilisateur et le business au cœur de ma démarche.
+          </p>
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              className="w-full h-full rounded"
+              src="https://www.youtube.com/embed/3sV7fqw509s?si=sV5pcSO3InFqjFnq"
+              title="Présentation vidéo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-        <img src="https://investinbordeaux.fr/wp-content/uploads/2021/01/Sans-titre-1.jpg" alt="Thinkeo Bordeaux illustration" />
-      </div>
-      <!-- Pilotage -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>📈 Pilotage de projet</h3>
-          <p>Remplacement ponctuel de Product Owners pour piloter des projets stratégiques ou préparer des kick-offs avec de nombreuses parties prenantes.</p>
-          <p><strong>Migration CEGID :</strong> Pilotage d'une migration d’un SI fiscal en urgence, coordination inter-équipes, appropriation rapide de sujets hors périmètre initial.</p>
-          <p><strong>Accompagnement construction de dossier de COPIL :</strong> conception de la présentation stratégique ayant débouché sur un financement, après un premier refus.</p>
-          <p><strong>Résultat :</strong> mobilisation d’équipes malgré des contraintes fortes, respect des échéances, satisfaction des métiers.</p>
+      </section>
+
+      {/* Projets phares */}
+      <section className="px-4 mt-16">
+        <header className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-pink-600">Projets phares</h2>
+        </header>
+        <div className="grid gap-8 md:grid-cols-2">
+
+          {/** Projet 1 */}
+          <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">📚 1st Product Manager</h3>
+              <p>J’ai accompagné les fondateurs de <strong>Thinkeo</strong>, une plateforme de Knowledge Management, dès les premières étapes de son développement produit.</p>
+              <p><strong>Mon rôle a couvert plusieurs volets :</strong></p>
+              <ul className="list-disc list-inside">
+                <li>Définition de la <strong>roadmap produit</strong></li>
+                <li>Gestion du <strong>backlog</strong> et priorisation</li>
+                <li>Réalisation des <strong>tests QA</strong> sur les fonctionnalités front-end</li>
+                <li><strong>Reporting de bugs</strong> et contribution à la qualité logicielle</li>
+                <li>Traduction des <strong>librairies back office</strong></li>
+                <li><strong>Déploiement</strong> du plugin Office/Excel sur <strong>Microsoft AppSource</strong></li>
+              </ul>
+              <p>En parallèle, j’ai progressivement mis en place un cadre <strong>Scrum</strong>, permettant de stabiliser l’équipe produit et de structurer les itérations de développement.</p>
+              <p><strong>Impact :</strong> accompagnement stratégique produit, levée de fonds réussie (1M€), structuration agile, forte autonomie de l’équipe.</p>
+            </div>
+            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://investinbordeaux.fr/wp-content/uploads/2021/01/Sans-titre-1.jpg" alt="Thinkeo Bordeaux illustration" />
+          </div>
+
+          {/** Projet 2 */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h3 className="text-xl font-semibold mb-2">📈 Pilotage de projet</h3>
+            <p>Remplacement ponctuel de Product Owners pour piloter des projets stratégiques ou préparer des kick-offs avec de nombreuses parties prenantes.</p>
+            <p><strong>Migration CEGID :</strong> Pilotage d'une migration d’un SI fiscal en urgence, coordination inter-équipes, appropriation rapide de sujets hors périmètre initial.</p>
+            <p><strong>Accompagnement construction de dossier de COPIL :</strong> conception de la présentation stratégique ayant débouché sur un financement, après un premier refus.</p>
+            <p><strong>Résultat :</strong> mobilisation d’équipes malgré des contraintes fortes, respect des échéances, satisfaction des métiers.</p>
+          </div>
+
+          {/** Projet 3 */}
+          <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">🤖 DATA & IA</h3>
+              <p>Expérimentations menées autour de l’intelligence artificielle et de la donnée avec les métiers : extraction automatique d’informations, catégorisation, moteur de recherche intelligent…</p>
+              <p>J’ai contribué à la <strong>conception de cas d’usage</strong>, à la <strong>réalisation de tests</strong>, à la <strong>documentation des résultats</strong> et au <strong>challenge des modèles</strong>.</p>
+              <p>J’ai également coanimé des <strong>ateliers d’idéation</strong> pour identifier des pistes d'amélioration du modèle IA et participé à l’<strong>acculturation à l'IA au grand public.</strong></p>
+              <p><strong>Résultat :</strong> gain de temps pour les utilisateurs, meilleure compréhension de l’IA, adoption facilitée.</p>
+            </div>
+            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://blog.digitalcook.fr/wp-content/uploads/2021/06/big-data-and-et-artificial-intelligence.jpg" alt="Illustration IA" />
+          </div>
+
+          {/** Projet 4 */}
+          <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">🛠️ Documentation</h3>
+              <p><strong>Travaux OSS <a href="https://medium.com/oss-by-maif/eurybia-une-nouvelle-solution-ossbymaif-pour-une-intelligence-artificielle-plus-ma%C3%AEtris%C3%A9e-843e651a2ced" target="_blank" rel="noopener noreferrer">Eurybia</a> &amp; <a href="https://maif.github.io/shapash/" target="_blank" rel="noopener noreferrer">Shapash</a> :</strong><br />
+              Redesign de l’illustration d’Eurybia sur Figma adoptée par les Data Scientists.<br />
+              Impulsion UX pour Shapash : design, site, présentation du projet. Ces éléments sont toujours en ligne après 3 ans.</p>
+              <p><strong>Autres projets :</strong><br />
+              Travaux sur la cartographie produit pour structurer un référentiel Produit, en collaboration avec de nombreuses parties prenantes.</p>
+              <p><strong>Résultats :</strong> documentation claire, continuité des projets, meilleure coordination, adhésion des parties prenantes.</p>
+            </div>
+            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png" alt="Documentation projet" />
+          </div>
+
+          {/** Projet 5 */}
+          <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">💡 MissStartup</h3>
+              <p><strong>Mission :</strong> Ne plus jamais rater un événement numérique près de chez vous !</p>
+              <p>À une époque où Meetup et Eventbrite étaient encore balbutiants, MissStartup informait les passionnés de tech, startup et numérique sur tous les événements à ne pas manquer dans leur ville.</p>
+              <ul className="list-disc list-inside">
+                <li>Recensement intelligent des événements numériques</li>
+                <li>Organisation de rencontres originales</li>
+                <li>Externalisation des meetups pour les startups</li>
+              </ul>
+              <p><strong>Pourquoi c’était innovant ?</strong><br />
+              Explosion des initiatives dans le digital, mais aucune plateforme centralisée. Les utilisateurs se sentaient perdus, isolés, en manque de repères malgré leur soif d'apprendre.</p>
+              <p><strong>Notre réponse :</strong><br />
+              Une application mobile prenant en compte votre géolocalisation, votre agenda et vos préférences pour vous recommander les événements les plus pertinents.</p>
+              <p><strong>Impact :</strong> Une communauté soudée, des rencontres humaines, et un gain de temps énorme pour les professionnels curieux du numérique.</p>
+            </div>
+            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/464436016_8276102732511988_1653507273224086791_n.png?..." alt="Illustration MissStartup" />
+          </div>
+
+          {/** Projet 6 */}
+          <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-2">🎨 Artoflight</h3>
+              <p><strong>Objectif :</strong> Réconcilier art et numérique.</p>
+              <p>ArtOfLight vend des œuvres d’art de nos artistes coup de cœur et accompagne les acteurs culturels dans leur digitalisation.</p>
+              <ul className="list-disc list-inside">
+                <li>Vente éphémère d’œuvres d’art via notre plateforme</li>
+                <li>Création de sites, plateformes d’enchères, boutiques en ligne, apps mobiles</li>
+                <li>Solutions sur mesure pour musées, galeries, éditeurs, libraires</li>
+              </ul>
+              <p><strong>Ma contribution :</strong> Conception de services numériques adaptés à la réalité des artistes, mise en valeur de leurs univers via des expériences digitales élégantes et efficaces.</p>
+              <p><strong>Valeur ajoutée :</strong> Une vision artistique alliée à une expertise produit numérique.</p>
+            </div>
+            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://artoflight.fr/wp-content/uploads/2025/05/ArtOfLight_Logo.png" alt="Logo ArtOfLight" />
+          </div>
+
         </div>
-      </div>
-      <!-- IA -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>🤖 DATA & IA</h3>
-          <p>Expérimentations menées autour de l’intelligence artificielle et de la donnée avec les métiers : extraction automatique d’informations, catégorisation, moteur de recherche intelligent…</p>
-          <p>J’ai contribué à la <strong>conception de cas d’usage</strong>, à la <strong>réalisation de tests</strong>, à la <strong>documentation des résultats</strong> et au <strong>challenge des modèles</strong>.</p>
-          <p>J’ai également coanimé des <strong>ateliers d’idéation</strong> pour identifier des pistes d'amélioration du modèle IA et participé à l’<strong>acculturation à l'IA au grand public.</strong></p>
-          <p><strong>Résultat :</strong> gain de temps pour les utilisateurs, meilleure compréhension de l’IA, adoption facilitée.</p>
+      </section>
+
+      {/* Call to Action */}
+      <section className="text-center my-16 px-4">
+        <div className="max-w-2xl mx-auto bg-pink-100 p-8 rounded-lg shadow">
+          <h2 className="text-2xl font-bold text-pink-600 mb-4">Envie d’échanger ?</h2>
+          <p className="text-gray-700 mb-4">Je suis disponible pour discuter de vos projets ou de vos besoins produit.</p>
+          <a
+            href="mailto:nastasiasjob@gmail.com"
+            className="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition"
+          >
+            Me contacter
+          </a>
         </div>
-        <img src="https://blog.digitalcook.fr/wp-content/uploads/2021/06/big-data-and-et-artificial-intelligence.jpg"/>
-      </div>
-      <!-- Documentation -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>🛠️ Documentation</h3>
-          <p><strong>Travaux OSS <a href="https://medium.com/oss-by-maif/eurybia-une-nouvelle-solution-ossbymaif-pour-une-intelligence-artificielle-plus-ma%C3%AEtris%C3%A9e-843e651a2ced" target="_blank" rel="noopener noreferrer">Eurybia</a> &amp; <a href="https://maif.github.io/shapash/" target="_blank" rel="noopener noreferrer">Shapash</a> :</strong><br />
-          Redesign de l’illustration d’Eurybia sur Figma adoptée par les Data Scientists.<br />
-          Impulsion UX pour Shapash : design, site, présentation du projet. Ces éléments sont toujours en ligne après 3 ans.</p>
-          <p><strong>Autres projets :</strong><br />
-          Travaux sur la cartographie produit pour structurer un référentiel Produit, en collaboration avec de nombreuses parties prenantes.</p>
-          <p><strong>Résultats :</strong> documentation claire, continuité des projets, meilleure coordination, adhésion des parties prenantes.</p>
-        </div>
-         <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png"/>
-      </div>
-      <!-- MissStartup -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>💡 MissStartup</h3>
-          <p><strong>Mission :</strong> Ne plus jamais rater un événement numérique près de chez vous !</p>
-          <p>À une époque où Meetup et Eventbrite étaient encore balbutiants, MissStartup informait les passionnés de tech, startup et numérique sur tous les événements à ne pas manquer dans leur ville.</p>
-          <ul>
-            <li>Recensement intelligent des événements numériques</li>
-            <li>Organisation de rencontres originales</li>
-            <li>Externalisation des meetups pour les startups</li>
-          </ul>
-          <p><strong>Pourquoi c’était innovant ?</strong><br />
-          Explosion des initiatives dans le digital, mais aucune plateforme centralisée. Les utilisateurs se sentaient perdus, isolés, en manque de repères malgré leur soif d'apprendre.</p>
-          <p><strong>Notre réponse :</strong><br />
-          Une application mobile prenant en compte votre géolocalisation, votre agenda et vos préférences pour vous recommander les événements les plus pertinents.</p>
-          <p><strong>Impact :</strong> Une communauté soudée, des rencontres humaines, et un gain de temps énorme pour les professionnels curieux du numérique.</p>
-        </div>
-        <img src="https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/464436016_8276102732511988_1653507273224086791_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=Ku_kBPQv448Q7kNvwG9-Zqk&_nc_oc=AdnfHWDsozZsq2nb2bsQ0fG4MmTUtUr3gDh01p-RDzxWU0YtVvF6B5IR-VXHP_KqfgQ&_nc_zt=23&_nc_ht=scontent-cdg4-3.xx&_nc_gid=UmVOcEb_5dFy2UR9esw7Fw&oh=00_AfJ-pIFvw6TBAu41eUdQwFHFipHfRPWeF4BWzklRqoqyaw&oe=6842C521" alt="Illustration MissStartup" />
-      </div>
-      <!-- Artoflight -->
-      <div class="service-card">
-        <div class="service-card-content">
-          <h3>🎨 Artoflight</h3>
-          <p><strong>Objectif :</strong> Réconcilier art et numérique.</p>
-          <p>ArtOfLight vend des œuvres d’art de nos artistes coup de cœur et accompagne les acteurs culturels dans leur digitalisation.</p>
-          <ul>
-            <li>Vente éphémère d’œuvres d’art via notre plateforme</li>
-            <li>Création de sites, plateformes d’enchères, boutiques en ligne, apps mobiles</li>
-            <li>Solutions sur mesure pour musées, galeries, éditeurs, libraires</li>
-          </ul>
-          <p><strong>Ma contribution :</strong> Conception de services numériques adaptés à la réalité des artistes, mise en valeur de leurs univers via des expériences digitales élégantes et efficaces.</p>
-          <p><strong>Valeur ajoutée :</strong> Une vision artistique alliée à une expertise produit numérique.</p>
-        </div>
-        <img src="https://artoflight.fr/wp-content/uploads/2025/05/ArtOfLight_Logo.png" alt="Logo ArtOfLight" />
-      </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-pink-600 text-white text-center py-4">
+        © 2025 - Nastasia SOILIH
+      </footer>
     </div>
-  </section>
-  <div class="cta">
-    <h2>Envie d’échanger ?</h2>
-    <p>Je suis disponible pour discuter de vos projets ou de vos besoins produit.</p>
-    <a href="mailto:nastasiasjob@gmail.com">Me contacter</a>
-  </div>
-  <footer>
-    © 2025 - Nastasia SOILIH
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const cards = document.querySelectorAll('.service-card');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      cards.forEach(card => {
-        if (card instanceof Element) {
-          observer.observe(card);
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+  );
+}
