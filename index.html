@@ -92,16 +92,27 @@
         margin-left: 1rem;
         margin-top: 0;
       }
-    }
+   .project {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .project {
-      background: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-    }
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+}
+
+.project:hover {
+  transform: scale(1.02); /* Grossissement léger */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
 
 .project img {
   width: 100%;
