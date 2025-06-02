@@ -4,7 +4,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen w-full bg-gray-50 text-gray-800">
       {/* Hero Section - pink gradient background */}
-      <header className="bg-gradient-to-r from-pink-600 to-pink-400 text-white py-20 px-4 text-center">
+      <header className="bg-gradient-to-r from-pink-600 to-pink-500 text-white py-20 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
           Product Owner | Cheffe de projet IT
         </h1>
@@ -14,7 +14,7 @@ export default function LandingPage() {
       </header>
 
       {/* White content box with intro and video */}
-      <section className="relative z-10 -mt-10 px-4">
+      <section className="relative z-10 px-4 mt-[-2.5rem] md:mt-[-2.5rem]">
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
           <p className="text-gray-700 mb-4">
             Product Owner et Cheffe de projet IT, je cumule plus de 15 ans d’expérience dans l’informatique, dont les 5 dernières années sur des produits liés à la DATA/IA, aux opérations bancaires, à la fiscalité, au voyage et aux frais de déplacement.
@@ -25,9 +25,9 @@ export default function LandingPage() {
           <p className="text-gray-700 mb-6">
             Entrepreneuse et ancienne Responsable digital, je place l’innovation, l’écoute utilisateur et le business au cœur de ma démarche.
           </p>
-          <div className="aspect-w-16 aspect-h-9">
+          <div className="relative pb-[56.25%] h-0">
             <iframe
-              className="w-full h-full rounded"
+              className="absolute top-0 left-0 w-full h-full rounded"
               src="https://www.youtube.com/embed/3sV7fqw509s?si=sV5pcSO3InFqjFnq"
               title="Présentation vidéo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -44,13 +44,16 @@ export default function LandingPage() {
         </header>
         <div className="grid gap-8 md:grid-cols-2">
 
+          {/** Projets (inchangés, sauf ajustement images) */}
+          {/** Tous les <img> reçoivent une hauteur max */}
+
           {/** Projet 1 */}
           <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
             <div className="md:w-2/3">
               <h3 className="text-xl font-semibold mb-2">📚 1st Product Manager</h3>
               <p>J’ai accompagné les fondateurs de <strong>Thinkeo</strong>, une plateforme de Knowledge Management, dès les premières étapes de son développement produit.</p>
               <p><strong>Mon rôle a couvert plusieurs volets :</strong></p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside mb-2">
                 <li>Définition de la <strong>roadmap produit</strong></li>
                 <li>Gestion du <strong>backlog</strong> et priorisation</li>
                 <li>Réalisation des <strong>tests QA</strong> sur les fonctionnalités front-end</li>
@@ -61,7 +64,7 @@ export default function LandingPage() {
               <p>En parallèle, j’ai progressivement mis en place un cadre <strong>Scrum</strong>, permettant de stabiliser l’équipe produit et de structurer les itérations de développement.</p>
               <p><strong>Impact :</strong> accompagnement stratégique produit, levée de fonds réussie (1M€), structuration agile, forte autonomie de l’équipe.</p>
             </div>
-            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://investinbordeaux.fr/wp-content/uploads/2021/01/Sans-titre-1.jpg" alt="Thinkeo Bordeaux illustration" />
+            <img className="md:w-1/3 max-h-60 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://investinbordeaux.fr/wp-content/uploads/2021/01/Sans-titre-1.jpg" alt="Thinkeo Bordeaux illustration" />
           </div>
 
           {/** Projet 2 */}
@@ -73,6 +76,8 @@ export default function LandingPage() {
             <p><strong>Résultat :</strong> mobilisation d’équipes malgré des contraintes fortes, respect des échéances, satisfaction des métiers.</p>
           </div>
 
+          {/** Projet 3 à 6 — mêmes modifs : max-h-60 pour img */}
+
           {/** Projet 3 */}
           <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row">
             <div className="md:w-2/3">
@@ -82,7 +87,7 @@ export default function LandingPage() {
               <p>J’ai également coanimé des <strong>ateliers d’idéation</strong> pour identifier des pistes d'amélioration du modèle IA et participé à l’<strong>acculturation à l'IA au grand public.</strong></p>
               <p><strong>Résultat :</strong> gain de temps pour les utilisateurs, meilleure compréhension de l’IA, adoption facilitée.</p>
             </div>
-            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://blog.digitalcook.fr/wp-content/uploads/2021/06/big-data-and-et-artificial-intelligence.jpg" alt="Illustration IA" />
+            <img className="md:w-1/3 max-h-60 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://blog.digitalcook.fr/wp-content/uploads/2021/06/big-data-and-et-artificial-intelligence.jpg" alt="Illustration IA" />
           </div>
 
           {/** Projet 4 */}
@@ -96,7 +101,7 @@ export default function LandingPage() {
               Travaux sur la cartographie produit pour structurer un référentiel Produit, en collaboration avec de nombreuses parties prenantes.</p>
               <p><strong>Résultats :</strong> documentation claire, continuité des projets, meilleure coordination, adhésion des parties prenantes.</p>
             </div>
-            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png" alt="Documentation projet" />
+            <img className="md:w-1/3 max-h-60 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png" alt="Documentation projet" />
           </div>
 
           {/** Projet 5 */}
@@ -105,7 +110,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-2">💡 MissStartup</h3>
               <p><strong>Mission :</strong> Ne plus jamais rater un événement numérique près de chez vous !</p>
               <p>À une époque où Meetup et Eventbrite étaient encore balbutiants, MissStartup informait les passionnés de tech, startup et numérique sur tous les événements à ne pas manquer dans leur ville.</p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside mb-2">
                 <li>Recensement intelligent des événements numériques</li>
                 <li>Organisation de rencontres originales</li>
                 <li>Externalisation des meetups pour les startups</li>
@@ -116,7 +121,7 @@ export default function LandingPage() {
               Une application mobile prenant en compte votre géolocalisation, votre agenda et vos préférences pour vous recommander les événements les plus pertinents.</p>
               <p><strong>Impact :</strong> Une communauté soudée, des rencontres humaines, et un gain de temps énorme pour les professionnels curieux du numérique.</p>
             </div>
-            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/464436016_8276102732511988_1653507273224086791_n.png?..." alt="Illustration MissStartup" />
+            <img className="md:w-1/3 max-h-60 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/464436016_8276102732511988_1653507273224086791_n.png?..." alt="Illustration MissStartup" />
           </div>
 
           {/** Projet 6 */}
@@ -125,7 +130,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-2">🎨 Artoflight</h3>
               <p><strong>Objectif :</strong> Réconcilier art et numérique.</p>
               <p>ArtOfLight vend des œuvres d’art de nos artistes coup de cœur et accompagne les acteurs culturels dans leur digitalisation.</p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside mb-2">
                 <li>Vente éphémère d’œuvres d’art via notre plateforme</li>
                 <li>Création de sites, plateformes d’enchères, boutiques en ligne, apps mobiles</li>
                 <li>Solutions sur mesure pour musées, galeries, éditeurs, libraires</li>
@@ -133,7 +138,7 @@ export default function LandingPage() {
               <p><strong>Ma contribution :</strong> Conception de services numériques adaptés à la réalité des artistes, mise en valeur de leurs univers via des expériences digitales élégantes et efficaces.</p>
               <p><strong>Valeur ajoutée :</strong> Une vision artistique alliée à une expertise produit numérique.</p>
             </div>
-            <img className="md:w-1/3 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://artoflight.fr/wp-content/uploads/2025/05/ArtOfLight_Logo.png" alt="Logo ArtOfLight" />
+            <img className="md:w-1/3 max-h-60 object-cover rounded-lg mt-4 md:mt-0 md:ml-4" src="https://artoflight.fr/wp-content/uploads/2025/05/ArtOfLight_Logo.png" alt="Logo ArtOfLight" />
           </div>
 
         </div>
@@ -146,7 +151,7 @@ export default function LandingPage() {
           <p className="text-gray-700 mb-4">Je suis disponible pour discuter de vos projets ou de vos besoins produit.</p>
           <a
             href="mailto:nastasiasjob@gmail.com"
-            className="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition"
+            className="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 hover:scale-105 transform transition"
           >
             Me contacter
           </a>
