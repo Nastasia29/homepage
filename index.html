@@ -103,12 +103,16 @@
       flex-direction: column;
     }
 
-    .project img {
-      width: 100%;
-      max-height: 15rem;
-      object-fit: cover;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
+.project img {
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  background-color: white; /* évite les bandes noires */
+}
     }
 
     .project h3 {
