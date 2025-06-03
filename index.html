@@ -28,7 +28,34 @@
     header.hero p {
       font-size: 1.25rem;
     }
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 3rem; /* 🟣 Ajout d’espace entre les projets */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 1rem;
+}
     section.content-box {
       margin-top: -2.5rem;
       padding: 0 1rem;
@@ -83,45 +110,6 @@
       .project-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.project img {
-  display: block;
-  margin: 1rem auto 0 auto;
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 0.5rem;
-  background-color: white;
-}
-   .project {
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-}
-
-.project:hover {
-  transform: scale(1.02); /* Grossissement léger */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
-}
     }
 
     .project h3 {
@@ -313,7 +301,6 @@ section.environments {
     left: 50%;
   }
 }
-
   </style>
 </head>
 <body>
@@ -333,7 +320,6 @@ section.environments {
       </div>
     </div>
   </section>
-
 <section class="timeline-section">
   <h2 class="section-title">Parcours</h2>
   <div class="timeline-container">
@@ -366,9 +352,7 @@ section.environments {
       <p>Com' & Informatique<br><strong>CSI-PC (ent.familiale)</strong></p>
     </div>
   </div>
-</section>
-
-  
+</section>  
   <section class="projects">
     <h2 class="section-title">Projets phares</h2>
     <div class="project-grid">
@@ -384,23 +368,22 @@ section.environments {
             <li>Reporting de bugs et contribution à la qualité logicielle</li>
             <li>Traduction des librairies back office</li>
             <li>Déploiement du plugin Office/Excel sur >Microsoft AppSource</li>
+          </ul>
         <p>En parallèle, j’ai progressivement mis en place un cadre Scrum, permettant de stabiliser l’équipe produit et de structurer les itérations de développement.</p>
         <p><strong>Impacts :</strong> accompagnement stratégique produit, levée de fonds réussie (1M€), structuration agile, forte autonomie de l’équipe.</p>
-          </ul>
         </div>
         <img src="https://investinbordeaux.fr/wp-content/uploads/2021/01/Sans-titre-1.jpg" alt="Thinkeo illustration">
       </div>
-
       <div class="project">
         <div>
           <h3><strong>🎯 Pilotage de projet</strong></h3>
           <p>Remplacement ponctuel de Product Owners pour piloter des projets stratégiques ou préparer des kick-offs avec de nombreuses parties prenantes: métiers, utilisateurs, transverses, entreprises filiales...</p>
-            <li>Migration CEGID : Pilotage de la migration d’un SI fiscal en urgence, coordination inter-équipes, appropriation rapide de sujets hors périmètre initial.</li>
           <ul>
-            <li>Accompagnement construction de dossier de COPIL :</strong> conception de la présentation stratégique ayant débouché sur un financement, après un premier refus.</li>
+            <li>Migration CEGID : Pilotage de la migration d’un SI fiscal en urgence, coordination inter-équipes, appropriation rapide de sujets hors périmètre initial.</li>
+            <li>Accompagnement construction de dossier de COPIL : conception de la présentation stratégique ayant débouché sur un financement, après un premier refus.</li>
             <li>Co-construction du dossier de Kick-off</li>
-            <p><strong>Résultats :</strong> mobilisation d’équipes malgré des contraintes fortes, respect des échéances, satisfaction des métiers, utilisateurs.</p>
           </ul>
+      <p><strong>Résultats :</strong> mobilisation d’équipes malgré des contraintes fortes, respect des échéances, satisfaction des métiers, utilisateurs.</p>
         </div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwK1AFbMcR2oJ5FGGivOT4f0r7bHv1AJSyjQ&s" alt="ERP CEGID Gestion financière">
       </div>
@@ -412,12 +395,11 @@ section.environments {
           <ul>
             <li>J’ai contribué à la conception de cas d’usage, à la réalisation de tests, à la documentation des résultats et au challenge des modèles.</li>
             <li>Co-oanimation des ateliers d’idéation pour identifier des pistes d'amélioration de l'Agent IA et participé à l’acculturation à l'IA au grand public.</li>
-            <p><strong>Résultats :</strong> gain de temps pour les utilisateurs, meilleure compréhension de l’IA, adoption facilitée.</p>
           </ul>
+      <p><strong>Résultats :</strong> gain de temps pour les utilisateurs, meilleure compréhension de l’IA, adoption facilitée.</p>
         </div>
         <img src="https://blog.digitalcook.fr/wp-content/uploads/2021/06/big-data-and-et-artificial-intelligence.jpg" alt="DATA & IA">
       </div>
-
       <div class="project">
         <div>
           <h3><strong>🛠️ Documentation</strong></h3>
@@ -426,20 +408,22 @@ section.environments {
             <li>Redesign de l’illustration d’Eurybia sur Figma adoptée par les Data Scientists.</li>
             <li>Impulsion UX pour Shapash : design, site, présentation du projet. Ces éléments sont toujours en ligne après 3 ans.</li>
             <li>Travaux cartographie des produits pour structurer un référentiel Produit en collaboration avec de nombreuses parties prenantes.</li>
-            <p><strong>Résultats :</strong> documentation claire, continuité des projets, meilleure coordination, adhésion des parties prenantes.</p>
           </ul>
+      <p><strong>Résultats :</strong> documentation claire, continuité des projets, meilleure coordination, adhésion des parties prenantes.</p>
         </div>
-        <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png">
+        <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*JfmSQHO-YML6egTUdSHifg.png" alt="Documentation Shapash et Eurybia">
       </div>
 <div class="project">
         <div>
-          <h3 style="font-size: 1.5rem; font-weight: bold;">🎨 <strong>Artoflight</strong></h3>
+          <h3><strong>🎨ArtOflight</strong></h3>
     <p><strong>Objectif :</strong> Comment redonner le pouvoir numérique aux acteurs artistiques?</p>
-    <ul style="padding-left: 1.2rem;">
     <p>ArtOfLight vend des œuvres d’art de nos artistes coup de cœur et accompagne les acteurs culturels dans leur digitalisation :</p>
+    <ul style="padding-left: 1.2rem;">
       <li>Vente éphémère d’œuvres d’art via notre plateforme</li>
       <li>Solutions sur mesure pour musées, galeries, éditeurs, libraires : sites internet, plateformes d’enchères, boutiques en ligne, apps mobiles</li>
+      </ul>
     <p><strong>Résultats :</strong></p>
+    <ul>
       <li>Gain de temps pour les clients qui bénéficient de ma vision artistique alliée à une expertise produit numérique.</li>
       <li>Conception de services numériques adaptés à la réalité des artistes, mise en valeur de leurs univers via des expériences digitales élégantes et efficaces.</li>
     </ul>
@@ -449,26 +433,27 @@ section.environments {
     alt="Logo ArtOfLight"
     style="max-width: 100%; height: auto; display: block;">
       </div>
-
       <div class="project">
         <div>
           <h3><strong>💡MissStartup</strong></h3>
-          <p><strong>Mission :</strong> Ne plus jamais rater un événement numérique près de chez vous !</p>
-          <p>À une époque où Meetup et Eventbrite étaient encore balbutiants, MissStartup informait les passionnés de tech, startup et numérique sur tous les événements à ne pas manquer à Paris:</p>
+      <p><strong>Mission :</strong> Ne plus jamais rater un événement numérique près de chez vous !</p>
+      <p>À une époque où Meetup et Eventbrite étaient encore balbutiants, MissStartup informait les passionnés de tech, startup et numérique sur tous les événements à ne pas manquer à Paris:</p>
           <ul>
             <li>Recensement intelligent des événements numériques</li>
             <li>Service traiteur thématique pour les événements techs</li>
             <p><strong>Pourquoi c’était innovant ?</strong></p>
+            <ul>
             <li>Explosion des initiatives dans le digital, mais aucune plateforme centralisée. Les utilisateurs se sentaient perdus, isolés, en manque de repères malgré leur soif d'apprendre.</li>
             <li>De l'espace de coworking à midi au meetup du soir, l'entrepreneur type passait ses journées à manger ce qu'il trouvait dans les lieux techs : saucissons, bières, chips et pizzas</li>
-           <p><strong>Notre réponse ?</strong></p>
+            </ul>
+      <p><strong>Notre réponse ?</strong></p>
+            <ul>
             <li>En 1er lieu : Une application mobile prenant en compte votre géolocalisation, votre agenda et vos préférences pour vous recommander les événements les plus pertinents.</li>
             <li>En 2ème temps : un service traiteur thématique autour de la forêt, espace, healthy...pour les événements techs, concoté maison par l'ambassadrice des startups :  MissStartup,</li>
           </ul>
         </div>
-        <img src="https://github.com/Nastasia29/homepage/blob/main/images/Capture%20d'%C3%A9cran%202025-06-02%20002720.png?raw=true" alt="MissStartup">
+        <img src="https://raw.githubusercontent.com/Nastasia29/homepage/main/images/Capture.png" alt="MissStartup">
       </div>
-       
     </div>
   </section>
 
@@ -485,7 +470,6 @@ section.environments {
       <li>Salesforce, CEGID</li>
     </ul>
   </div>
-
   <div class="env-block">
     <h3>💡 Thématiques d’émerveillement</h3>
     <ul>
@@ -494,7 +478,6 @@ section.environments {
       <li>Design system, UX/UI</li>
     </ul>
   </div>
-
   <div class="env-block">
     <h3>🌿 Intérêts personnels</h3>
     <ul>
@@ -504,7 +487,6 @@ section.environments {
     </ul>
   </div>
 </section>
-
   <section class="cta">
     <div class="cta-box">
       <h2>Envie d’échanger ?</h2>
@@ -512,7 +494,6 @@ section.environments {
       <a href="mailto:nastasiasjob@gmail.com">Me contacter</a>
     </div>
   </section>
-
 <footer>
   <p>
     <a href="https://www.linkedin.com/in/nnsoilih/" target="_blank" style="color: white; text-decoration: none;">
@@ -520,6 +501,5 @@ section.environments {
     </a>
   </p>
 </footer>
-
 </body>
 </html>
