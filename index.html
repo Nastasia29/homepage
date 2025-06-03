@@ -223,6 +223,52 @@ section.environments {
     font-weight: bold;
     margin-top: 2rem;
   }
+.timeline-section {
+  padding: 4rem 1rem;
+  background: #fff;
+}
+
+.timeline-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  scrollbar-width: thin;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  min-width: 180px;
+  max-width: 220px;
+  background: #fce7f3;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 5px solid #db2777;
+}
+
+.timeline-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #db2777;
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.timeline-container::-webkit-scrollbar {
+  height: 6px;
+}
+.timeline-container::-webkit-scrollbar-thumb {
+  background: #db2777;
+  border-radius: 3px;
+}
+
+    
 
   </style>
 </head>
@@ -377,6 +423,44 @@ section.environments {
       <li>Culture, gastronomie, arts</li>
       <li>Événements techs, talks & enseignement</li>
     </ul>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <h2 class="section-title">Mon parcours</h2>
+  <div class="timeline-container">
+    <div class="timeline-item">
+      <h4>2022–2025</h4>
+      <p>Agile Master & Pilotage de projet<br><strong>MAIF / NEOSOFT</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2023–2025</h4>
+      <p>Talks, cours, jeu agile<br><strong>Transmission & pédagogie</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2020–2022</h4>
+      <p>1st Product Manager<br><strong>Thinkeo (remote)</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2018–2020</h4>
+      <p>Responsable Web & Social Media<br><strong>O’BOX Groupe</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2015–2016</h4>
+      <p>Com digitale<br><strong>Galerie Arsinoé</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2014–2017</h4>
+      <p>CEO<br><strong>MissStartup</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2011–2013</h4>
+      <p>Fondatrice<br><strong>Anosfêtes</strong></p>
+    </div>
+    <div class="timeline-item">
+      <h4>2000s–2011</h4>
+      <p>Comm. & informatique<br><strong>CSI-PC (familial)</strong></p>
+    </div>
   </div>
 </section>
 
