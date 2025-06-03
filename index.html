@@ -223,15 +223,20 @@ section.environments {
     font-weight: bold;
     margin-top: 2rem;
   }
-/* Nouvelle frise horizontale avec ligne centrale */
+.timeline-section {
+  padding: 4rem 1rem;
+  background: #fff;
+}
+
 .timeline-container {
   position: relative;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 3rem;
   padding: 3rem 1rem 5rem;
-  max-width: 100%;
+  justify-content: flex-start;
 }
 
 .timeline-container::before {
@@ -248,19 +253,22 @@ section.environments {
 
 .timeline-item {
   position: relative;
+  flex: 0 0 auto;
+  min-width: 250px;
+  max-width: 280px;
   background: white;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.75rem;
-  min-width: 200px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  scroll-snap-align: center;
   z-index: 1;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   width: 14px;
   height: 14px;
@@ -273,14 +281,39 @@ section.environments {
 }
 
 .timeline-item h4 {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0.5rem;
   font-size: 1rem;
   color: #db2777;
 }
 
 .timeline-item p {
+  line-height: 1.5;
   font-size: 0.9rem;
   color: #374151;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .timeline-container::before {
+    display: none;
+  }
+
+  .timeline-item {
+    min-width: 90%;
+    max-width: 95%;
+  }
+
+  .timeline-item::before {
+    top: -10px;
+    left: 50%;
+  }
 }
 
   </style>
@@ -312,7 +345,7 @@ section.environments {
     </div>
     <div class="timeline-item">
       <h4>2023–2025</h4>
-      <p>Talks, cours universitaire, création jeu agile<br><strong>Transmission & pédagogie</strong></p>
+      <p>Talks, cours faculté, création jeu agile<br><strong>Partage & pédagogie</strong></p>
     </div>
     <div class="timeline-item">
       <h4>2020–2022</h4>
@@ -336,10 +369,11 @@ section.environments {
     </div>
     <div class="timeline-item">
       <h4>2005–2009</h4>
-      <p>Com' & informatique<br><strong>CSI-PC ( ent.familiale)</strong></p>
+      <p>Com' & Informatique<br><strong>CSI-PC (ent.familiale)</strong></p>
     </div>
   </div>
 </section>
+
   
   <section class="projects">
     <h2 class="section-title">Projets phares</h2>
