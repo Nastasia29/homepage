@@ -28,7 +28,33 @@
     header.hero p {
       font-size: 1.25rem;
     }
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 1rem;
+}
     section.content-box {
       margin-top: -2.5rem;
       padding: 0 1rem;
@@ -74,46 +100,15 @@
     }
 
     .project-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
     @media (min-width: 768px) {
       .project-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .project {
-        display: flex;
-        flex-direction: row;
-      }
-
-.project img {
-  display: block;
-  margin: 1rem auto 0 auto;
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 0.5rem;
-  background-color: white;
-}
-   .project {
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-}
 
 .project:hover {
   transform: scale(1.02); /* Grossissement léger */
