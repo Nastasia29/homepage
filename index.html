@@ -305,16 +305,12 @@ section.environments {
     top: -10px;
     left: 50%;
   }
-.certifications {
-  padding: 4rem 1rem;
-  background-color: #fff;
-}
-
 .certifications-container {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-evenly;  /* Aligne les éléments de manière uniforme */
+  gap: 2rem;  /* Espacement entre les éléments */
+  flex-wrap: wrap; /* Permet à l'affichage de se mettre sur plusieurs lignes si nécessaire */
+  padding: 2rem 0;
 }
 
 .certification-item {
@@ -323,16 +319,17 @@ section.environments {
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  max-width: 100%;
+  width: 200px; /* Limite la largeur des éléments */
+  flex: 1 1 auto;  /* Flexibilité pour les tailles des éléments */
+  max-width: 250px; /* Évite que l'élément ne dépasse une certaine largeur */
 }
 
 .certification-image {
-  width: 100%;
-  max-height: 150px;
+  width: 100%;  /* Assure que l'image prend toute la largeur de son parent */
+  max-height: 150px;  /* Limite la hauteur de l'image */
   object-fit: contain;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  /* Ajoute un espace sous l'image */
 }
 
 .certification-item h3 {
@@ -340,8 +337,7 @@ section.environments {
   color: #db2777;
   font-weight: bold;
 }
-
-  
+ 
 }
   </style>
 </head>
