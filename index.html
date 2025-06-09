@@ -306,33 +306,53 @@ section.environments {
     left: 50%;
   }
 .certifications-container {
-  display: flex;
-  justify-content: space-evenly;  /* Aligne les éléments de manière uniforme */
-  gap: 2rem;  /* Espacement entre les éléments */
-  flex-wrap: wrap; /* Permet à l'affichage de se mettre sur plusieurs lignes si nécessaire */
-  padding: 2rem 0;
-}
-.certification-item {
-  text-align: center;
-  background: #f9fafb;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 200px; /* Limite la largeur des éléments */
-  flex: 1 1 auto;  /* Flexibilité pour les tailles des éléments */
-  max-width: 250px; /* Évite que l'élément ne dépasse une certaine largeur */
-}
-.certification-image {
-  max-height: 150px;  /* Limite la hauteur de l'image */
-  object-fit: contain;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;  /* Ajoute un espace sous l'image */
-}
-.certification-item h3 {
-  font-size: 1rem;
-  color: #db2777;
-  font-weight: bold;
-}
+    display: flex;
+    justify-content: space-evenly;  /* Aligne les éléments de manière uniforme */
+    gap: 2rem;  /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet à l'affichage de se mettre sur plusieurs lignes si nécessaire */
+    padding: 2rem 0;
+  }
+
+  .certification-item {
+    text-align: center;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Limite la largeur des éléments */
+    flex: 1 1 auto;  /* Flexibilité pour les tailles des éléments */
+    max-width: 250px; /* Évite que l'élément ne dépasse une certaine largeur */
+  }
+
+  .certification-image {
+    width: 100%;  /* Assure que l'image prend toute la largeur de son parent */
+    max-height: 150px;  /* Limite la hauteur de l'image */
+    object-fit: contain;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;  /* Ajoute un espace sous l'image */
+  }
+
+  .certification-item h3 {
+    font-size: 1rem;
+    color: #db2777;
+    font-weight: bold;
+  }
+
+  /* Ajout d'une règle pour limiter la taille de l'image en fonction de l'espace disponible */
+  @media (max-width: 768px) {
+    .certifications-container {
+      flex-direction: column; /* Empile les certifications sur petits écrans */
+      align-items: center; /* Centre les éléments */
+    }
+
+    .certification-item {
+      width: 100%;  /* Utilise toute la largeur disponible */
+      max-width: 300px; /* Limite la taille à 300px */
+    }
+
+    .certification-image {
+      max-height: 120px;  /* Réduit la taille de l'image sur mobile */
+    }
 }
   </style>
 </head>
